@@ -7,8 +7,7 @@ const Home: NextPage = () => {
   return <h1 className="text-3xl font-bold underline">{t('homepage_title')}</h1>
 }
 
-// @ts-ignore
-export const getServerSideProps = async ({ locale }) => ({
+export const getServerSideProps = async ({ locale }: any) => ({
   props: {
     ...(await serverSideTranslations(locale, ['common']))
   }
